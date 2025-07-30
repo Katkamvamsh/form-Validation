@@ -6,8 +6,9 @@
     background-size: cover;
     display: flex;
     flex-direction: column;
-  align-items: start;
-  margin-bottom: 30px;
+  align-items: center;
+  justify-content: start;
+ 
       }
       .form-name {
         background: linear-gradient(rgb(255, 0, 242), #fbff00);
@@ -21,11 +22,14 @@
     .registration-input-field{
       padding: 12px;
       border: 2px solid rgb(27, 27, 9);
-      width: 30vw;
+      width: 60vw;
       border-radius: 5px;
       background-color: transparent;
       color: aliceblue;
       font-size: 18px;
+    }
+    .error{
+      color: red;
     }
     .para{
       color: rgb(238, 255, 0);
@@ -39,10 +43,13 @@
       /* font-weight: bold; */
     }
     input::placeholder{
-      color: rgba(230, 220, 220, 0.651);
+      color: rgba(0, 0, 0, 0.651);
     }
     input{
-      padding: 5px 15px;
+      padding: 8px 15px;
+      width: 30vw;
+      border-radius: 10px;
+      border: 1px solid rgb(27, 27, 9);
       
     }
 .registration-button{
@@ -57,7 +64,13 @@
   font-weight: bold;
   width: 32vw;
 }
-
+.button2{
+background-color: rgb(53, 224, 53);
+}
+.info{
+  color: black;
+  font-weight: bold;
+}
 
     @media screen and (min-width: 400px) and (max-width: 900px) {
       .registration-main-container{

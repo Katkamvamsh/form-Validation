@@ -55,7 +55,7 @@ const Registration = () => {
     if (!ConfirmPassword) {
       errors.ConfirmPasswordError = "* Confirm Password is required";
     } else if (password !== ConfirmPassword) {
-      errors.ConfirmPasswordError = "* Passwords do not match";
+      errors.ConfirmPasswordError = "* Passwords did not matched";
     }
 
     setError(errors);
@@ -137,7 +137,7 @@ const Registration = () => {
         Register
       </button>
 
-      <p>If already registered, click below to login.</p>
+      <p className="info">If already registered ? , click on below to login.</p>
       <button type="button" className="button2" onClick={forLoginPage}>
         Login Account
       </button>
