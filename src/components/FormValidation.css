@@ -1,0 +1,83 @@
+.registration-main-container{
+  /* background-image: url(https://res.cloudinary.com/dvrfvm9k3/image/upload/v1719416696/klaay93mhdwnhyt84mz1.jpg); */
+  text-align: start;
+    padding: 100px 0px 20px 50px;
+    width: 100vw;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+  align-items: start;
+  margin-bottom: 30px;
+      }
+      .form-name {
+        background: linear-gradient(rgb(255, 0, 242), #fbff00);
+        -webkit-background-clip:text;
+        color: transparent;
+    }
+    
+    /* .registration-input-container{
+      color: rgb(218, 50, 50);
+    } */
+    .registration-input-field{
+      padding: 12px;
+      border: 2px solid rgb(27, 27, 9);
+      width: 30vw;
+      border-radius: 5px;
+      background-color: transparent;
+      color: aliceblue;
+      font-size: 18px;
+    }
+    .para{
+      color: rgb(238, 255, 0);
+      font-size: 20px;
+      font-style: italic;
+    }
+    .warn-para{
+      color: rgb(255, 251, 0);
+      font-size: 24px;
+      font-style: italic; 
+      /* font-weight: bold; */
+    }
+    input::placeholder{
+      color: rgba(230, 220, 220, 0.651);
+    }
+    input{
+      padding: 5px 15px;
+      
+    }
+.registration-button{
+  background-color: green;
+  border: none;
+  border-radius: 5px;
+  color: aliceblue;
+  margin-top: 10px;
+  padding:9.5px ;
+  font-size: 18px;
+  font-family: "Roboto";
+  font-weight: bold;
+  width: 32vw;
+}
+
+
+    @media screen and (min-width: 400px) and (max-width: 900px) {
+      .registration-main-container{
+          padding: 100px 0px 20px 30px;
+         
+      }
+      .button{
+        background-color: rgb(53, 224, 53);
+        width: 55vw;
+      }
+      .warn-para{
+        font-size: 20px;
+        font-style: italic; 
+        padding: 0px 10px 0px 10px ;
+      }
+      .registration-input-field{
+         width: 55vw;
+        border-radius: 5px;
+       padding: 9px;
+       font-size: 20px;
+       }
+    }
+    
