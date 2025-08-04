@@ -71,6 +71,9 @@ background-color: rgb(53, 224, 53);
   color: black;
   font-weight: bold;
 }
+.dropdown{
+  padding: 4px;
+}
 
     @media screen and (min-width: 400px) and (max-width: 900px) {
       .registration-main-container{

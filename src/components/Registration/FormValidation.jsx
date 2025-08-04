@@ -1,15 +1,15 @@
 import { useState } from "react";
-import './FormValidation.css';
+import "./FormValidation.css";
 
 const Registration = () => {
-
-
   const [userDetails, setUserDetails] = useState({
     userName: "",
     emailId: "",
     password: "",
     ConfirmPassword: "",
+    department: "",
   });
+  console.log(userDetails.userName);
 
   const [error, setError] = useState({});
 
@@ -57,6 +57,13 @@ const Registration = () => {
     } else if (password !== ConfirmPassword) {
       errors.ConfirmPasswordError = "* Passwords did not matched";
     }
+    if (!userDetails.department) {
+      errors.departmentError = "* Please select a department";
+    } else if (userDetails.department !== "Others") {
+      errors.departmentError = "* Please select a Valid department";
+    }else if (userDetails.department === "Others"){
+      errors.departmentError = "";
+    }
 
     setError(errors);
 
@@ -72,6 +79,7 @@ const Registration = () => {
       emailId: "",
       password: "",
       ConfirmPassword: "",
+      department: "",
     });
   };
 
@@ -132,7 +140,36 @@ const Registration = () => {
         />
         <p className="error">{error.ConfirmPasswordError}</p>
       </div>
-
+      <div>
+        <span>Select Department : </span>
+        <select
+          className="dropdown"
+          name="department"
+          id=""
+          onChange={handleChange}
+          value={userDetails.department}
+        >
+          <option value="Sales">Saless</option>
+          <option value="Technical">Teechnical</option>
+          <option value="Others">Others</option>
+        </select>
+      </div>
+      <p className="error">{error.departmentError}</p>
+      {userDetails.department === "Others" && (
+        <div className="registration-input-container">
+          <label htmlFor="otherDepartment">Specify Department</label>
+          <br />
+          <input
+            type="text"
+            name="otherDepartment"
+            id="otherDepartment"
+            value={userDetails.otherDepartment}
+            onChange={handleChange}
+            placeholder="Enter Department"
+          />
+          <p className="error">{error.otherDepartmentError}</p>
+        </div>
+      )}
       <button type="submit" className="registration-button">
         Register
       </button>

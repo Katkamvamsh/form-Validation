@@ -1,14 +1,16 @@
-import { useState } from 'react'
 
 import './App.css'
+import DynamicClassComponent from './components/DynamicClasscomponent/DynamicClasscomponent'
 
-import Registration from './components/FormValidation'
+import Registration from './components/Registration/FormValidation'
+import UseEffectTask from './components/UseEffectTask/UseEffectTask'
 function App() {
-  const [count, setCount] = useState(0)
-
+  
   return (
     <>
       <Registration/>
+      <UseEffectTask/>
+      <DynamicClassComponent/>
     </>
   )
 }
