@@ -88,7 +88,7 @@ const Registration = () => {
       <h1 className="form-name">SIGN UP</h1>
 
       <div className="registration-input-container">
-        <label htmlFor="username">Username</label>
+        <label htmlFor="username">Username enter</label>
         <br />
         <input
           name="userName"
