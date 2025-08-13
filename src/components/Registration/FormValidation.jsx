@@ -91,7 +91,7 @@ const Registration = () => {
         <label htmlFor="username">Username enter</label>
         <br />
         <input
-          name="userName"
+          name="userName" 
           id="username"
           value={userDetails.userName}
           onChange={handleChange}
