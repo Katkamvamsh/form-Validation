@@ -11,10 +11,10 @@ const Registration = () => {
   });
   console.log(userDetails.userName);
 
-  const [error, setError] = useState({});
+  const [error, setError] =  useState({});
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target; 
     setUserDetails({ ...userDetails, [name]: value });
   };
 
@@ -88,10 +88,10 @@ const Registration = () => {
       <h1 className="form-name">SIGN UP</h1>
 
       <div className="registration-input-container">
-        <label htmlFor="username">Username</label>
+        <label htmlFor="username">Username enter</label>
         <br />
         <input
-          name="userName"
+          name="userName" 
           id="username"
           value={userDetails.userName}
           onChange={handleChange}
