@@ -1,19 +1,37 @@
-import React, { useEffect, useState } from 'react';
-import './UsersTable.css';
+import React, { useEffect, useState } from "react";
+import "./UsersTable.css";
 
 const UsersList = () => {
   const [users, setUsers] = useState([]);
+  const [searchValue, setSearchValue] = useState("");
 
+  console.log("searchValue", searchValue);
   useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/users')
-      .then(res => res.json())
-      .then(data => setUsers(data))
-      .catch(err => console.error('Failed to fetch users:', err));
+    fetch("https://jsonplaceholder.typicode.com/users")
+      .then((res) => res.json())
+      .then((data) => setUsers(data))
+      .catch((err) => console.error("Failed to fetch users:", err));
   }, []);
 
+  const handleSearchChange = (e) => {
+    setSearchValue(e.target.value);
+  };
+
+  const filteredUsers = users.filter((user) =>
+    JSON.stringify(user).toLowerCase().includes(searchValue.toLowerCase()),
+  );
+console.log("filteredUsers", filteredUsers);
+
   return (
-    <div className="users-container">
-      <h2 className="table">User List from API in Table Format</h2>
+    <div className="main-conatiner">
+      <div  className="users-container">
+        <h2 className="table">User List from API in Table Format</h2>
+         <input
+          type="search"
+          onChange={handleSearchChange}
+          value={searchValue}
+        />
+      </div>
       <table className="users-table">
         <thead>
           <tr>
@@ -28,7 +46,7 @@ const UsersList = () => {
           </tr>
         </thead>
         <tbody>
-          {users.map(user => (
+          {filteredUsers.map((user) => (
             <tr key={user.id}>
               <td>{user.id}</td>
               <td>

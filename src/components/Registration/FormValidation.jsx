@@ -14,7 +14,7 @@ const Registration = () => {
   const [error, setError] =  useState({});
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target; 
     setUserDetails({ ...userDetails, [name]: value });
   };
 

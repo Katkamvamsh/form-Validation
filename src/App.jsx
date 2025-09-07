@@ -5,6 +5,8 @@ import UsersList from './components/UsersTable/UsersTable'
 import Registration from './components/Registration/FormValidation'
 import UseEffectTask from './components/UseEffectTask/UseEffectTask'
 import Footer from './components/Footer/Footer'
+import Circle from './components/Circle/Circle'
+import Rest from './components/Rest/Rest'
 function App() {
   
   return (
@@ -14,6 +16,8 @@ function App() {
       <DynamicClassComponent/>
       <UsersList/>
       <Footer/>
+      <Circle/>
+      <Rest/>
     </>
   )
 }
